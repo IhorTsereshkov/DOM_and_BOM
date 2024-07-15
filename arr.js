@@ -91,23 +91,23 @@
 // const namesAll = document.querySelector("ul");
 // console.log(namesAll.textContent);
 
-const names = document.querySelectorAll("li");
+// const names = document.querySelectorAll("li");
 // names.forEach((elements) => {
 //   console.log(elements.textContent);
 // });
 
-names.forEach((elements, index) => {
-  elements.textContent = index;
-});
-console.log(names);
+// names.forEach((elements, index) => {
+//   elements.textContent = index;
+// });
+// console.log(names);
 
 // Задание 3
 // Добавить к нескольким тегам на странице класс "forRemove". Далее написать JS код, который найдет в HTML все элементы с классом "forRemove" и удалит их.
 
-const textDelete = document.querySelectorAll(".forRemove");
-textDelete.forEach((elements) => {
-  elements.remove();
-});
+// const textDelete = document.querySelectorAll(".forRemove");
+// textDelete.forEach((elements) => {
+//   elements.remove();
+// });
 
 // const link = document.createElement("a");
 // link.href = "https://www.google.com";
@@ -126,39 +126,39 @@ textDelete.forEach((elements) => {
 // Задание 4
 // Создать с помощью js абзац (тег p). Добавить в него контент. Добавить к нему стили: размер 36px, жирный шрифт. Добавить абзац с текстом на страницу.
 
-const paragraphs = document.createElement("p");
-paragraphs.textContent = "Lorem ipsum, dolor sit amet consectetur";
-paragraphs.style.fontSize = "36px";
-paragraphs.style.fontWeight = "600";
-document.body.append(paragraphs);
+// const paragraphs = document.createElement("p");
+// paragraphs.textContent = "Lorem ipsum, dolor sit amet consectetur";
+// paragraphs.style.fontSize = "36px";
+// paragraphs.style.fontWeight = "600";
+// document.body.append(paragraphs);
 
 // Задание 5
 // Написать функцию, которая принимает на вход 3 параметра: название тега, название цвета, содержимое. Функция должна сформировать необходимый тег, добавить необходимый стиль с цветом и внести содержимое. Вывести несколько таких сгенерированных тегов в консоль, затем отправить их на страницу.
 
-const createWorld = (teg, color, content) => {
-  const tegName = document.createElement(teg);
-  tegName.style.color = color;
-  tegName.textContent = content;
-  return tegName;
-};
-const content = createWorld("p", "red", "Hello world");
-const content1 = createWorld("h1", "blue", "My pictures");
-const content2 = createWorld("h2", "green", "Paragraphs");
-console.log(content, content1, content2);
-document.body.append(content);
-document.body.append(content1);
-document.body.append(content2);
+// const createWorld = (teg, color, content) => {
+//   const tegName = document.createElement(teg);
+//   tegName.style.color = color;
+//   tegName.textContent = content;
+//   return tegName;
+// };
+// const content = createWorld("p", "red", "Hello world");
+// const content1 = createWorld("h1", "blue", "My pictures");
+// const content2 = createWorld("h2", "green", "Paragraphs");
+// console.log(content, content1, content2);
+// document.body.append(content);
+// document.body.append(content1);
+// document.body.append(content2);
 
 // Задание 6
 // Вставить в страницу (в html документ) тег <select>. С помощью js (в цикле) добавить в этот select опции (option) под годы от 1960 по 2020.
 
-const select = document.createElement("select");
-document.body.append(select);
-for (let elements = 1960; elements <= 2020; elements++) {
-  const option = document.createElement("option");
-  option.textContent = elements;
-  select.append(option);
-}
+// const select = document.createElement("select");
+// document.body.append(select);
+// for (let elements = 1960; elements <= 2020; elements++) {
+//   const option = document.createElement("option");
+//   option.textContent = elements;
+//   select.append(option);
+// }
 
 // Задание 7
 // Вставить в страницу (в html документ) ul.
@@ -176,27 +176,27 @@ for (let elements = 1960; elements <= 2020; elements++) {
 // ... остальные li с контентом
 // Маска получается такой: "Клиент ИМЯ СТАТУС заказ", где имя - свойство объекта (а объект здесь - это текущая ячейка массива), статус зависит от от свойства order: если true – то оплатил, если false – то отменил.
 
-const clients = [
-  { name: "Женя", order: true },
-  { name: "Кристина", order: true },
-  { name: "Павел", order: false },
-  { name: "Виолетта", order: false },
-  { name: "Костя", order: true },
-];
-const listTop = document.createElement("ul");
-document.body.append(listTop);
-clients.forEach((elements) => {
-  const list = document.createElement("li");
-  list.style.listStyleType = "none";
-  if (elements["order"] == true) {
-    elements["order"] = "оплатил";
-  } else {
-    elements["order"] = "отменил";
-  }
-  const text = `- Клиент ${elements.name} ${elements["order"]} заказ`;
-  list.textContent = text;
-  listTop.append(list);
-});
+// const clients = [
+//   { name: "Женя", order: true },
+//   { name: "Кристина", order: true },
+//   { name: "Павел", order: false },
+//   { name: "Виолетта", order: false },
+//   { name: "Костя", order: true },
+// ];
+// const listTop = document.createElement("ul");
+// document.body.append(listTop);
+// clients.forEach((elements) => {
+//   const list = document.createElement("li");
+//   list.style.listStyleType = "none";
+//   if (elements["order"] == true) {
+//     elements["order"] = "оплатил";
+//   } else {
+//     elements["order"] = "отменил";
+//   }
+//   const text = `- Клиент ${elements.name} ${elements["order"]} заказ`;
+//   list.textContent = text;
+//   listTop.append(list);
+// });
 
 // Задание 8
 // Есть массив ссылок:
@@ -208,23 +208,88 @@ clients.forEach((elements) => {
 // При нажатии на ссылки адреса должны открываться в новой вкладке (атрибут target="_blank")
 // 3) Добавить DIV из пункта 1 (со ссылками внутри ) в BODY
 
-let linksArr = [
-  "https://www.amazon.com/",
-  "https://www.youtube.com/",
-  "https://devby.io/",
-  "https://www.google.com/",
-  "https://apple.com/",
-];
+// let linksArr = [
+//   "https://www.amazon.com/",
+//   "https://www.youtube.com/",
+//   "https://devby.io/",
+//   "https://www.google.com/",
+//   "https://apple.com/",
+// ];
 
-const block = document.createElement("div");
-block.style.backgroundColor = "green";
-block.style.padding = "15px 20px";
+// const block = document.createElement("div");
+// block.style.backgroundColor = "green";
+// block.style.width = "350px";
+// block.style.marginLeft = "50px";
+// block.style.padding = "15px 20px";
 
-for (let elements of linksArr) {
-  const link = document.createElement("a");
-  link.href = elements;
-  link.setAttribute("target", "_blank");
-  link.textContent = "LINK";
-  block.append(link);
-}
-document.body.append(block);
+// for (let elements of linksArr) {
+//   const link = document.createElement("a");
+//   link.href = elements;
+//   link.setAttribute("target", "_blank");
+//   link.textContent = "LINK";
+//   block.append(link);
+// }
+// document.body.append(block);
+
+// Задание 9*
+// Есть массив объектов с полями name, age. Например:
+// const users = [
+// {name: 'Mark', age: 12},
+// {name: 'Olga', age: 30},
+// {name:'Tom', age: 25},
+// {name:'Den', age: 43}
+// ]
+// Создать в html таблицу (table).
+// C помощью js заполнить таблицу информацией из массива, в одной колонке будут имена, во второй возраст. Имена должны быть красного цвета, age - синего.
+// ПОДСКАЗКА, Таблица состоит из строк (tr) и ячеек (td) внутри этих строк. Строк должно создаваться столько, сколько объектов внутри массива, и их количество может быть любым.
+
+// const users = [
+//   { name: "Mark", age: 12 },
+//   { name: "Olga", age: 30 },
+//   { name: "Tom", age: 25 },
+//   { name: "Den", age: 43 },
+// ];
+// const table = document.createElement("table");
+// table.border = "1px";
+// document.body.append(table);
+// users.forEach((elements) => {
+//   const tr = document.createElement("tr");
+//   table.append(tr);
+//   const td = document.createElement("td");
+//   const tdAge = document.createElement("td");
+//   td.textContent = elements.name;
+//   td.style.color = "red";
+//   tdAge.textContent = elements.age;
+//   tdAge.style.color = "blue";
+//   tr.append(td);
+//   tr.append(tdAge);
+// });
+
+// const table = document.createElement("table");
+// table.setAttribute("border", "1px");
+// document.body.append(table);
+// users.forEach((elements) => {
+//   table.innerHTML += `<tr>
+//       <td style="color:red";>${elements.name}</td>
+//       <td style="color:blue";>${elements.age}</td>
+//     </tr>`;
+// });
+
+// Задание 10
+// Есть верстка: https://teenscool1.notion.site...
+// С помощью JavaScript:
+// 1) Найти в коде список ul и добавить ему класс “list”.
+// 2) На li через один (начиная с самого первого) установить класс “item”
+// 3) На все ссылки в примере установить класс “custom-link”
+// const ul = document.querySelector("ul");
+// ul.classList.add("list");
+// const li = document.querySelectorAll("li");
+// li.forEach((elements, index) => {
+//   if (index % 2 == 0) {
+//     elements.classList.add("item");
+//   }
+// });
+// const link = document.querySelectorAll("a");
+// link.forEach((elements) => {
+//   elements.classList.add("custom=link");
+// });
